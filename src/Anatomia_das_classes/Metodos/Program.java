@@ -25,6 +25,10 @@ public class Program {
 		smarttv.aumentarVolume();
 		System.out.println("Tv Volume: "+smarttv.volume);
 
+		System.out.println();
+		
+		smarttv.escolherCanal(25);
+		System.out.println("Tv volume: "+smarttv.canal);
 	}
 
 }
