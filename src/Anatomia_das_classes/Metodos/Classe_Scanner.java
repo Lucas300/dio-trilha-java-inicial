@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Classe_Scanner {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 		System.out.print("Digite seu nome: ");
