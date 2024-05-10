@@ -23,29 +23,32 @@ public class SimulacaoBancaria {
 			// Dica: Utilze o switch/case para o programa realizar as operações escolhidas
 			// pelo usuário.
 			switch (opcao) {
+			case 0:
+  				System.out.println("Programa encerrado.");
+  				break;
 			case 1:
 				System.out.print("Valor do deposito: ");
 				double deposito = scanner.nextDouble();
 				saldo += deposito;
-				System.out.println("Saldo atual: "+saldo);
+  				System.out.println("Saldo atual: " + saldo);
 				break;
 			case 2:
 				System.out.print("Valor do Saque: ");
 				double saque = scanner.nextDouble();
-				if (saque > saldo) {
-					System.out.println("Saldo insuficiente.");
-				} else {
-					saldo -= saque;
-				}
-				break;
+  				if (saque > saldo) {
+  					System.out.println("Saldo insuficiente.");
+  				} else {
+  					saldo -= saque;
+  					System.out.println("Saldo atual: " + saldo);
+  				}
+  				break;
 			case 3:
-				System.out.println("Saldo atual:" + saldo);
-				;
+				System.out.println("Saldo atual: " + saldo);
 				break;
 			// Exibe mensagem de opção inválida se o usuário escolher uma opção inválida:
 			default:
-				System.out.println("Programa encerrado.");
+				System.out.println("Opção inválida. Tente novamente.");
 			}
-		} while (opcao != 4);
+		} while (opcao != 0);
 	}
 }
